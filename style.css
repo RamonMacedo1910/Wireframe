@@ -1,0 +1,50 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0c0ce94d;
+}
+.conteudo{
+    width: 80%;
+    height: 80vh;
+    display: flex;
+    box-shadow: 5px 5sx 10px rgba(0, 0, 0, .212);
+}
+
+.imagem{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fdE3a7D7;
+    padding: 1rem;
+}
+
+.imagem img{
+    width: 28rem;
+}
+
+.form{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.cabecalho{
+    display: flex;
+    justify-content: center;
+}
+
+.cabecalho h1{
+    
+}
