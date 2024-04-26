@@ -38,13 +38,93 @@ body{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    background-color: rgb(93, 0, 243);
+    padding: 3rem;
 }
 
 .cabecalho{
     display: flex;
     justify-content: center;
+    margin-bottom: 3rem;
 }
 
-.cabecalho h1{
-    
+.cabecalho h1::after{
+    content: " ";
+    display: block;
+    width: 5rem;
+    height: 0.3rem;
+    margin: 0 auto;
+    position: absolute;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+}
+
+.grupo_input{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 1rem 0;
+}
+.input_box{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.1rem;
+}
+
+.input_box input{
+    margin: 0.6rem;
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 1px 1px 6px #0000001c;
+}
+
+.input_box input:hover{
+    background-color: rgb(93, 93, 165);
+    transform: scale(1.1)
+
+}
+
+.input_box label{
+     font-size: 1.5rem;
+     font-weight: 1000 ;
+     color: #ffffffc0;
+}
+
+.input_box ::placeholder{
+    color: rgb(0, 0, 0);
+}
+
+.botao{
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    border: solid 1px blue;
+    border-radius: 20px;
+    color: blue;
+    background-color: white;
+    transition: background-color 0.5s ease, color 0.5s ease, transform 0.5s ease;
+}
+.botao:hover{
+    background-color: blue;
+    color: white;
+    transform: scale(1.2)
+}
+.botao button a{
+    text-decoration: none;
+    font-size: 0.93rem;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+
+.botao2{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin-top: 2.5rem;
+    background-color: rgb(93, 93, 165);
+    padding: 0.65rem;
+    border-radius: 5px;
+    cursor: pointer;
 }
