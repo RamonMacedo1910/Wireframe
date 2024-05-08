@@ -10,10 +10,10 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #0c0ce94d;
+    background-color: rgb(47, 129, 253);
 }
 .conteudo{
-    width: 80%;
+    width: 90%;
     height: 80vh;
     display: flex;
     box-shadow: 5px 5sx 10px rgba(0, 0, 0, .212);
@@ -24,21 +24,23 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #fdE3a7D7;
+    background-color: #fff;
     padding: 1rem;
 }
 
 .imagem img{
     width: 28rem;
+    object-fit: scale-down;
 }
 
 .form{
-    width: 50%;
+    font-size: larger;
+    width: 60%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: rgb(93, 0, 243);
+    background-color: rgb(47, 129, 253);
     padding: 3rem;
 }
 
@@ -48,27 +50,34 @@ body{
     margin-bottom: 3rem;
 }
 
+.titulo{
+    color: #fff;
+}
+
+/*
 .cabecalho h1::after{
-    content: " ";
     display: block;
-    width: 5rem;
+    width: 6rem;
     height: 0.3rem;
     margin: 0 auto;
     position: absolute;
     border-radius: 10px;
     background-color: rgb(255, 255, 255);
-}
+} */
 
 .grupo_input{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    flex-direction: column;
     padding: 1rem 0;
 }
 .input_box{
     display: flex;
     flex-direction: column;
     margin-bottom: 1.1rem;
+    width: 500px;
+    
 }
 
 .input_box input{
@@ -77,30 +86,41 @@ body{
     border: none;
     border-radius: 10px;
     box-shadow: 1px 1px 6px #0000001c;
+    
 }
 
 .input_box input:hover{
-    background-color: rgb(93, 93, 165);
-    transform: scale(1.1)
+    transition: 250ms;
+    background-color: lightskyblue;
+    transform: scale(1.05)
 
 }
 
 .input_box label{
      font-size: 1.5rem;
      font-weight: 1000 ;
-     color: #ffffffc0;
+     color: #fff
 }
 
 .input_box ::placeholder{
     color: rgb(0, 0, 0);
 }
 
+.grupo_botao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+}
+
 .botao{
     align-items: center;
     justify-content: center;
     width: 50%;
+    height: 30px;
     border: solid 1px blue;
-    border-radius: 20px;
+    border-radius: 10px;
     color: blue;
     background-color: white;
     transition: background-color 0.5s ease, color 0.5s ease, transform 0.5s ease;
