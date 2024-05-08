@@ -10,13 +10,14 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(47, 129, 253);
+    background-image: linear-gradient(145deg, rgb(68, 122, 202), rgb(6, 6, 139));
+    font-family: Arial, Helvetica, sans-serif;
 }
 .conteudo{
     width: 90%;
     height: 80vh;
     display: flex;
-    box-shadow: 5px 5sx 10px rgba(0, 0, 0, .212);
+    box-shadow: 5px 5sx 10px rgba(0, 0, 0, 0.685);
 }
 
 .imagem{
@@ -26,6 +27,7 @@ body{
     align-items: center;
     background-color: #fff;
     padding: 1rem;
+    border-radius: 30%;
 }
 
 .imagem img{
@@ -40,14 +42,19 @@ body{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: rgb(47, 129, 253);
-    padding: 3rem;
+    /*background-color: rgb(47, 129, 253);
+    padding: 3rem;*/
 }
 
 .cabecalho{
     display: flex;
     justify-content: center;
     margin-bottom: 3rem;
+    
+}
+
+h1{
+    font-weight: 800;
 }
 
 .titulo{
@@ -98,8 +105,9 @@ body{
 
 .input_box label{
      font-size: 1.5rem;
-     font-weight: 1000 ;
-     color: #fff
+     font-weight: 700 ;
+     color: #fff;
+     margin-left: 15px;
 }
 
 .input_box ::placeholder{
