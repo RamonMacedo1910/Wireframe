@@ -1,3 +1,4 @@
+/*--------------CSS DA TELA DE LOGIN--------------*/
 *{
     padding: 0;
     margin: 0;
@@ -8,16 +9,18 @@ body{
     width: 100%;
     height: 100vh;
     display: flex;
-    justify-content: center;
-    align-items: center;
     background-image: linear-gradient(145deg, rgb(68, 122, 202), rgb(6, 6, 139));
     font-family: Arial, Helvetica, sans-serif;
 }
 .conteudo{
     width: 90%;
     height: 80vh;
+    justify-content: center;
+    align-items: center;
     display: flex;
     box-shadow: 5px 5sx 10px rgba(0, 0, 0, 0.685);
+    margin-top: 80px;
+    margin-left: 85px;
 }
 
 .imagem{
@@ -27,7 +30,7 @@ body{
     align-items: center;
     background-color: #fff;
     padding: 1rem;
-    border-radius: 30%;
+    border-radius: 15%;
 }
 
 .imagem img{
@@ -111,7 +114,7 @@ h1{
 }
 
 .input_box ::placeholder{
-    color: rgb(0, 0, 0);
+    color: rgb(61, 58, 58);
 }
 
 .grupo_botao {
@@ -132,6 +135,7 @@ h1{
     color: blue;
     background-color: white;
     transition: background-color 0.5s ease, color 0.5s ease, transform 0.5s ease;
+    cursor: pointer;
 }
 .botao:hover{
     background-color: rgb(0, 68, 255);
@@ -173,6 +177,38 @@ a{
 
 /*--------------CSS DA TELA DE CADASTRO--------------*/
 
+nav{
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+    margin-top: 10px;
+}
+
+.logo img{
+    width: auto;
+    height: auto;
+    max-width: 80px;
+    max-height: 80px;
+    border-radius: 15%;
+    margin-left: 10px;
+    background-color:#fff;
+}
+
+.itens{
+    list-style: none;
+    display: flex;
+   margin-left: 1050px;
+}
+
+.links{
+    display: flex;
+    justify-content: space-between;
+}
+
+.itens li{
+    padding-left: 10px;
+}
+
 .conteudo2{
     width: 90%;
     height: 80vh;
@@ -189,6 +225,9 @@ a{
     flex-direction: column;
     /*background-color: rgb(47, 129, 253);
     padding: 3rem;*/
+    position: absolute;
+    margin-left: 275px;
+    margin-top: 80px;
 }
 
 
@@ -231,5 +270,19 @@ a{
 }
 
 .input_box2 ::placeholder{
-    color: rgb(0, 0, 0);
+    color: rgb(61, 58, 58);
+}
+
+@media screen and (max-width: 1330px) {
+    .imagem{
+        display: none;
+    }
+
+    .conteudo{
+        width:73%;
+    }
+    
+    .form{
+        width: 100%;
+    }
 }
