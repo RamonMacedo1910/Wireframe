@@ -3,24 +3,23 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 body{
     width: 100%;
     height: 100vh;
     display: flex;
-    background-image: linear-gradient(145deg, rgb(68, 122, 202), rgb(6, 6, 139));
-    font-family: Arial, Helvetica, sans-serif;
-}
-.conteudo{
-    width: 90%;
-    height: 80vh;
     justify-content: center;
     align-items: center;
+    background-image: linear-gradient(145deg, rgb(68, 122, 202), rgb(6, 6, 139));
+    
+}
+.conteudo{
+    width: 80%;
+    height: 80vh;
     display: flex;
     box-shadow: 5px 5sx 10px rgba(0, 0, 0, 0.685);
-    margin-top: 80px;
-    margin-left: 85px;
 }
 
 .imagem{
@@ -34,7 +33,7 @@ body{
 }
 
 .imagem img{
-    width: 28rem;
+    width: 30rem;
     object-fit: scale-down;
 }
 
@@ -121,8 +120,8 @@ h1{
     display: flex;
     align-items: center;
     justify-content: center;
-
     width: 100%;
+    padding-left: 4rem;
 }
 
 .botao{
@@ -137,6 +136,7 @@ h1{
     transition: background-color 0.5s ease, color 0.5s ease, transform 0.5s ease;
     cursor: pointer;
 }
+
 .botao:hover{
     background-color: rgb(0, 68, 255);
     color: white;
@@ -172,47 +172,18 @@ h1{
 
 a{
     text-decoration: none;
-    color: green;
+    color: rgb(0, 0, 0);
+    
 }
 
 /*--------------CSS DA TELA DE CADASTRO--------------*/
 
-nav{
-    display: flex;
-    justify-content: space-between;
-    height: 100px;
-    margin-top: 10px;
-}
-
-.logo img{
-    width: auto;
-    height: auto;
-    max-width: 80px;
-    max-height: 80px;
-    border-radius: 15%;
-    margin-left: 10px;
-    background-color:#fff;
-}
-
-.itens{
-    list-style: none;
-    display: flex;
-   margin-left: 1050px;
-}
-
-.links{
-    display: flex;
-    justify-content: space-between;
-}
-
-.itens li{
-    padding-left: 10px;
-}
-
 .conteudo2{
-    width: 90%;
+    width: 80%;
     height: 80vh;
     display: flex;
+    justify-content: center;
+    align-items: center;
     box-shadow: 5px 5sx 10px rgba(0, 0, 0, 0.685);
 }
 
@@ -225,9 +196,6 @@ nav{
     flex-direction: column;
     /*background-color: rgb(47, 129, 253);
     padding: 3rem;*/
-    position: absolute;
-    margin-left: 275px;
-    margin-top: 80px;
 }
 
 
@@ -279,10 +247,23 @@ nav{
     }
 
     .conteudo{
-        width:73%;
+        width:50%;
     }
     
     .form{
         width: 100%;
+    }
+}
+
+@media screen and (max-width: 1064px) {
+    .conteudo{
+        width: 90%;
+        height: auto;
+    }
+
+    .grupo_input{
+        flex-direction: column;
+        flex-wrap: nowrap;
+
     }
 }
