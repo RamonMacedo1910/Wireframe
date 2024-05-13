@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <script src="script.js"></script>
+    <script src="login.js"></script>
     <title>Login</title>
   </head>
 
@@ -29,7 +29,7 @@
                 type="email"
                 placeholder="Digite o seu email"
                 name="email"
-                id="campo_email"
+                id="login"
                 required
               />
             </div>
@@ -52,7 +52,7 @@
             <br />
 
             <div class="grupo_botao">
-              <button class="botao" type="submit">Enviar</button>
+              <button class="botao" type="submit" onclick="logar(); return false">Enviar</button>
             </div>
             <div class="link-cadastro">
               <p>Não possui um login?<a href="cadastro.html"> Cadastre-se</a></p>

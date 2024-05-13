@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <script src="script.js"></script>
+    <script src="cadastro.js"></script>
     <title>Cadastro</title>
   </head>
   
@@ -13,7 +13,7 @@
   
 
     <div class="form2">
-        <form>
+        <form id="form">
           <div class="cabecalho">
             <div class="titulo">
               <h1>Cadastro</h1>
@@ -23,12 +23,13 @@
           <div class="grupo_input2">
             <div class="input_box2">
               <label for="campo_nome">Código da Etec</label>
-              <input
-                type="number"
-                placeholder="Digite o código da Etec"
-                name="cd_etec"
-                id="campo_nome"
-                required
+              <input 
+              type="number"
+              placeholder="Digite o código da Etec" 
+              name="cd_etec" 
+              id="campo_CodigoEtec" 
+              required 
+              oninput="contar_caracteres()"
               />
             </div>
 
@@ -59,9 +60,9 @@
                 <label for="campo_senha">Confirme a senha</label>
                 <input
                   type="password"
-                  placeholder="Digite a sua senha novamente"
+                  placeholder="Confirme a senha"
                   name="senha"
-                  id="campo_senha"
+                  id="campo_senha2"
                   required
                 />
               </div>
@@ -72,7 +73,7 @@
             <div class="grupo_botao">
               <button class="botao" type="submit">Enviar</button>
             <div class="grupo_botao">
-             <a class="botao" href="index.html">voltar</a>
+             <a class="botao_voltar" href="index.html">Voltar</a>
         </form>
       </div>
     </div>
