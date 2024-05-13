@@ -165,8 +165,8 @@ h1{
 
 a{
     text-decoration: none;
-    color: rgb(0, 0, 0);
-    
+    color: rgb(110, 255, 248);
+
 }
 
 input::-webkit-outer-spin-button,
@@ -260,6 +260,18 @@ input::-webkit-inner-spin-button {
     color: white;
     transform: scale(1.2)
 }
+
+/*EU TENTEIIII*/
+.grupoEntrada{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin-top: 2.5rem;
+    background-color: rgb(93, 93, 165);
+    padding: 0.65rem;
+    border-radius: 5px;
+}
+
 
 @media screen and (max-width: 1330px) {
     .imagem{

@@ -343,6 +343,7 @@ body{
 }
 
 .searchIcon{
+    
     transition: all 0.5s;
     border: none;
     border-radius: 10px;
