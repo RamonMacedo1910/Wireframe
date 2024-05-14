@@ -31,7 +31,7 @@ body{
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    
     align-items: center;
 }
 
@@ -101,11 +101,9 @@ body{
 }
 
 .logInput{
-    transition: all 0.5s;
+    
     width: 85%;
     height: 40px;
-    background-color: transparent;
-    color: rgb(66,0,255);
     display: block;
     text-align: start;
     border: none;
@@ -416,7 +414,6 @@ body{
 .error{
     color: red;
 }
-
 .errorInput{
     box-shadow: rgba(255,0,0,1) 0px 0px 1px 2.5px;
     background: rgb(255,170,195) url(Icons/Icon_password2.png) no-repeat left;
@@ -425,6 +422,15 @@ body{
     border-radius: 8px;
 }
 
+.botao_voltar {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 9999; /* Certifica-se de que o botão de voltar esteja sempre acima de outros elementos */
+}
+.botao_voltar:hover{
+    background-color: lightblue;
+}
 input[type="search"]::-webkit-search-cancel-button{
     transition: all 0.25s;
     -webkit-appearance: none;

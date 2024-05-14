@@ -6,46 +6,51 @@
     <link rel="stylesheet" href="styleYukio.css">
     <script src="registro.js" type="text/Javascript"></script>
     <title>Registro</title>
+    <style>
+        .searchIcon {
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+        }
 
+        .searchBox {
+            position: relative;
+        }
+
+        .searchInput {
+            padding-right: 40px;
+        }
+    </style>
+</head>
 <body class="backDesign2">
    
     <div class="fakeBody">
+        <a class="botao_voltar"  href="index.html">Sair</a>
         <div class="centered teste">
             <h1 class="centered">ETEC Adolpho Berezin</h1>
             <div class="searchBox">
-                <input class="logInput searched" type="search" name="search" id="search" autocomplete="off">
-                <input class="searchIcon" type="image" src="SearchIcon.png"  width="40" height="40" id="search">
-                <!--EU COLOQUEI TROQUEI O CLASS TYPE=BUTTON POR TYPE = IMAGE-->
-
-                <a class="botao_voltar"  href="index.html"><img src="botao-voltar.png" alt="Voltar"></a>    
-
+                <input class="logInput searched searchInput" type="search" name="search" id="search" autocomplete="off">
             </div>
-   <select class="selectList" id="filter">
-                <option value="nm">Nome</option>
-                <option value="rm">RM</option>
-                <option value="none" selected>Nenhum</option>
-            </select>
 
             <div class="rowFlex">
                 <div class="entrance" id="entrance">
                     <div class="centered titleLabel">Entrada</div>
-                    <div id="entranceGroup">
-
-                    </div>
+                    <div id="entranceGroup"></div>
                 </div> 
 
                 <div class="exit" id="exit">
                     <div class="centered titleLabel">Saída</div>
-                    <div id="exitGroup">
-
-                    </div>
+                    <div id="exitGroup"></div>
                 </div>
-
             </div>
 
             <div class="dataBox">
                 <div class="calendarImg"></div>
-                <input class="logInput dated" type="date" name="dated" id="dated" autocomplete="off" src="Icon_calendar2.png">
+                <input class="logInput dated" type="date" name="dated" id="dated" autocomplete="off">
             </div>
             <div class="etecIcon"></div>
         </div>

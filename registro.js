@@ -1,188 +1,66 @@
-var selectedFilter = "none"
+document.addEventListener("DOMContentLoaded", () => {
+    // Array de alunos (substitua com seus próprios dados)
+    const alunos = [
+        { nome: "Yukio Utiyama Sato", rm: "14020", entrada: "2024-05-14 08:30", saida: "2024-05-14 17:00" },
+        { nome: "Pedro Andreotti Sales", rm: "12045", entrada: "2024-05-14 07:50", saida: "2024-05-14 15:30" },
+        { nome: "Ramon Mesquita", rm: "14053", entrada: "2024-05-14 12:30", saida: "N/A" },
+        { nome: "Arthur Kalinauskas", rm: "16032", entrada: "2024-05-14 09:00", saida: "2024-05-14 18:00" },
+        { nome: "Thayna", rm: "18025", entrada: "2024-05-14 10:00", saida: "2024-05-14 17:30" },
+        { nome: "Gabriel Lareglia", rm: "20010", entrada: "2024-05-14 08:45", saida: "2024-05-14 16:45" },
+        { nome: "Brenno ", rm: "22015", entrada: "2024-05-14 11:15", saida: "N/A" }
+    ];
 
-var fakeBDEntrance = [
-    // Nome | RM | Entrada | Data
-    aluno1=["Yukio Utiyama Sato","14020","20:30","2024-04-01"],
-    aluno2=["Pedro Andreotti Sales","12045","07:50","2024-04-02"],
-    aluno3=["Ramon Mesquita","14053","12:30","2024-04-03"],
-    aluno4=["Arthur Kalinauskas","16032","21:00","2024-04-03"],
-];
+    // Função para pesquisar e exibir entradas e saídas do aluno
+    const pesquisarAluno = () => {
+        const termoPesquisa = document.getElementById("search").value.toLowerCase();
+        const alunoEncontrado = alunos.find(aluno => aluno.nome.toLowerCase().includes(termoPesquisa));
 
-var fakeBDExit = [
-    // Nome | RM | Saida | Data
-    aluno1=["Yukio Utiyama Sato","14020","22:30","2024-04-01"],
-    aluno2=["Pedro Andreotti Sales","12045","11:00","2024-04-02"],
-    aluno3=["Arthur Kalinauskas","16032","22:45","2024-04-03"],
-    aluno4=["Arthur Kalinauskas","16032","12:45","2024-04-04"],
-];
+        if (alunoEncontrado) {
+            document.getElementById("entranceGroup").innerHTML = `<div class="upperBox centered">
+                <div class="innerFirstBox">
+                    <div class="centered" style="width: 100%;">
+                        <div class="nm_aluno">Nome: ${alunoEncontrado.nome}</div>
+                        <div class="rm_aluno">RM: ${alunoEncontrado.rm}</div>
+                    </div>
+                    <div class="randomImg"></div>
+                </div>
+                <div class="innerSecondBox">
+                    <div class="txtLabel2">Entrada</div>
+                    <div class="roundedInner">
+                        <div class="txtLabel2 hour">${formatarData(alunoEncontrado.entrada)}</div>
+                        <div class="randomImg2"></div>
+                    </div>
+                </div>
+            </div>`;
 
-document.addEventListener("DOMContentLoaded",()=>{
-    // Data Update NOW!
-    var dating = new Date();
-    var data = dating.getDay();
-    var month = dating.getMonth()+1;
-    var year = dating.getFullYear();
-    var fullData = year+"-"+month.toString().padStart(2,"0")+"-"+data.toString().padStart(2,"0");
-    document.getElementById("dated").value = fullData.toString();
-    document.getElementById("dated").addEventListener("change",()=>{updtRegister()})
-    document.getElementById("filter").addEventListener("change",()=>{
-        selectedFilter = document.getElementById("filter").value;
-    })
-    updtRegister();
-})
-
-var updtRegister = () => {
-
-    // Clear Children
-        document.getElementById("entrance").removeChild(document.getElementById("entranceGroup"));
-        var entranceNew = document.createElement("div");
-        entranceNew.id = "entranceGroup";
-        document.getElementById("entrance").appendChild(entranceNew);
-
-        document.getElementById("exit").removeChild(document.getElementById("exitGroup"));
-        var exitNew = document.createElement("div");
-        exitNew.id = "exitGroup";
-        document.getElementById("exit").appendChild(exitNew);
-
-    // Entrance
-    for (let i = 0; i < fakeBDEntrance.length; i++) {
-        if (fakeBDEntrance[i][3] == document.getElementById("dated").value){
-        // First Box of Entrance
-
-        var dived = document.createElement("div");
-        dived.classList.add("upperBox");
-        dived.classList.add("centered");
-
-        var innerFirstBox = document.createElement("div");
-        innerFirstBox.classList.add("innerFirstBox");
-
-        var centeredMaxwidth = document.createElement("div");
-        centeredMaxwidth.classList.add("centered");
-        centeredMaxwidth.style.width = "100%";
-
-        var nm_aluno = document.createElement("div");
-        nm_aluno.classList.add("nm_aluno");
-        nm_aluno.id = "nm_aluno";
-        nm_aluno.textContent = "Nome: "+fakeBDEntrance[i][0].toString();
-
-        var rm_aluno = document.createElement("div");
-        rm_aluno.classList.add("rm_aluno");
-        rm_aluno.id = "rm_aluno";
-        rm_aluno.textContent = "RM: "+fakeBDEntrance[i][1].toString();
-
-        var randomImg = document.createElement("div");
-        randomImg.classList.add("randomImg");
-
-
-        centeredMaxwidth.appendChild(nm_aluno);
-        centeredMaxwidth.appendChild(rm_aluno);
-        innerFirstBox.appendChild(centeredMaxwidth);
-        innerFirstBox.appendChild(randomImg);
-
-
-        // Second box of Entrance
-
-        var innerSecondBox = document.createElement("div");
-        innerSecondBox.classList.add("innerSecondBox");
-
-        var txtLabel2 = document.createElement("div");
-        txtLabel2.classList.add("txtLabel2");
-        txtLabel2.textContent = "Entrada";
-
-        var roundedInner = document.createElement("div");
-        roundedInner.classList.add("roundedInner");
-
-        var hour = document.createElement("div");
-        hour.classList.add("txtLabel2");
-        hour.classList.add("hour");
-        hour.id = "hour";
-        hour.textContent = fakeBDEntrance[i][2].toString();
-
-        var randomImg2 = document.createElement("div");
-        randomImg2.classList.add("randomImg2");
-
-        roundedInner.appendChild(hour);
-        roundedInner.appendChild(randomImg2);
-        innerSecondBox.appendChild(txtLabel2);
-        innerSecondBox.appendChild(roundedInner);
-
-        // Final adjust on Entrance
-
-        dived.appendChild(innerFirstBox);
-        dived.appendChild(innerSecondBox);
-        document.getElementById("entranceGroup").appendChild(dived);
+            document.getElementById("exitGroup").innerHTML = `<div class="upperBox centered">
+                <div class="innerFirstBox">
+                    <div class="centered" style="width: 100%;">
+                        <div class="nm_aluno">Nome: ${alunoEncontrado.nome}</div>
+                        <div class="rm_aluno">RM: ${alunoEncontrado.rm}</div>
+                    </div>
+                    <div class="randomImg"></div>
+                </div>
+                <div class="innerSecondBox">
+                    <div class="txtLabel2">Saída</div>
+                    <div class="roundedInner">
+                        <div class="txtLabel2 hour">${formatarData(alunoEncontrado.saida)}</div>
+                        <div class="randomImg3"></div>
+                    </div>
+                </div>
+            </div>`;
+        } else {
+            document.getElementById("entranceGroup").innerHTML = "Aluno não encontrado.";
+            document.getElementById("exitGroup").innerHTML = "";
         }
-    }
+    };
 
+    // Função para formatar a data
+    const formatarData = (dataString) => {
+        const data = new Date(dataString);
+        return `${data.toLocaleDateString()} ${data.toLocaleTimeString()}`;
+    };
 
-    // Exit Boxs
-
-    for (let i = 0; i < fakeBDExit.length; i++) {
-        if (fakeBDExit[i][3] == document.getElementById("dated").value){
-
-        // First Box of Exit
-            
-        var dived = document.createElement("div");
-        dived.classList.add("upperBox");
-        dived.classList.add("centered");
-    
-        var innerFirstBox = document.createElement("div");
-        innerFirstBox.classList.add("innerFirstBox");
-    
-        var centeredMaxwidth = document.createElement("div");
-        centeredMaxwidth.classList.add("centered");
-        centeredMaxwidth.style.width = "100%";
-    
-        var nm_aluno = document.createElement("div");
-        nm_aluno.classList.add("nm_aluno");
-        nm_aluno.id = "nm_aluno";
-        nm_aluno.textContent = "Nome: "+fakeBDExit[i][0].toString();
-    
-        var rm_aluno = document.createElement("div");
-        rm_aluno.classList.add("rm_aluno");
-        rm_aluno.id = "rm_aluno";
-        rm_aluno.textContent = "RM: "+fakeBDExit[i][1].toString();
-    
-        var randomImg = document.createElement("div");
-        randomImg.classList.add("randomImg");
-    
-    
-        centeredMaxwidth.appendChild(nm_aluno);
-        centeredMaxwidth.appendChild(rm_aluno);
-        innerFirstBox.appendChild(centeredMaxwidth);
-        innerFirstBox.appendChild(randomImg);
-    
-    
-        // Second box of Exit
-    
-        var innerSecondBox = document.createElement("div");
-        innerSecondBox.classList.add("innerSecondBox");
-    
-        var txtLabel2 = document.createElement("div");
-        txtLabel2.classList.add("txtLabel2");
-        txtLabel2.textContent = "Saída";
-    
-        var roundedInner = document.createElement("div");
-        roundedInner.classList.add("roundedInner");
-    
-        var hour = document.createElement("div");
-        hour.classList.add("txtLabel2");
-        hour.classList.add("hour");
-        hour.textContent = fakeBDExit[i][2].toString();
-    
-        var randomImg3 = document.createElement("div");
-        randomImg3.classList.add("randomImg3");
-    
-        roundedInner.appendChild(hour);
-        roundedInner.appendChild(randomImg3);
-        innerSecondBox.appendChild(txtLabel2);
-        innerSecondBox.appendChild(roundedInner);
-    
-        // Final adjust on Exit
-    
-        dived.appendChild(innerFirstBox);
-        dived.appendChild(innerSecondBox);
-        document.getElementById("exitGroup").appendChild(dived);
-        }
-    }
-}
+    // Adicionar evento de clique ao ícone de pesquisa
+    document.getElementById("search").addEventListener("click", pesquisarAluno);
+});
