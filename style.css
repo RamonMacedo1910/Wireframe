@@ -164,6 +164,7 @@ h1{
 }
 
 a{
+    font-weight: bolder;
     text-decoration: none;
     color: rgb(110, 255, 248);
 

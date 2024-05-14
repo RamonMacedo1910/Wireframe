@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
 
 body{
+    overflow-x: hidden;
+    overflow-y: hidden;
     margin: 0;
     top: 0;
     left: 0;
@@ -16,7 +18,7 @@ body{
     margin-left: 100%;
 }
 .realBody{
-    background: linear-gradient(-180deg,rgba(60,92,229,0.69),rgba(31,9,95,0.94));
+    background-image: linear-gradient(145deg, rgb(68, 122, 202), rgb(6, 6, 139));
     display: flex;
     flex-direction: column;
     justify-content: center; 
@@ -24,7 +26,7 @@ body{
     height: 680px;
 }
 .fakeBody{
-    background: linear-gradient(-30deg,rgba(66,92,225,1),rgba(30,0,100,1)) no-repeat;
+    background-image: linear-gradient(145deg, rgb(68, 122, 202), rgb(6, 6, 139));
     height: 100%;
     width: 100%;
     display: flex;
@@ -198,7 +200,7 @@ body{
 }
 
 .searched{
-    background: rgb(231,223,255);
+    background: rgb(255, 255, 255);
     padding-right: 1.66%;
     background-size: 6.66%;
     border-radius: 8px;
@@ -210,7 +212,7 @@ body{
 .searched:hover, .searched:focus{
     color: white;
     padding-right: 1.66%;
-    background: rgba(31, 9, 95, 0.658);
+    background-color: lightskyblue;
     background-size: 6.66%;
     border-radius: 8px;
     box-shadow: rgba(255,255,255,0.75) 0px 0px 0.5px 2px;
@@ -348,7 +350,7 @@ body{
     border: none;
     border-radius: 10px;
     margin: 0% 1% 0% 1%;
-    background: rgb(231,223,255) url(Icons/Icon_search2.PNG) no-repeat center;
+    background: rgb(255, 255, 255) url(Icons/Icon_search2.PNG) no-repeat center;
     background-size: 50%;
     width: 10%;
     box-shadow: rgba(255,255,255,0) 0px 0px 0px 0px;
@@ -358,19 +360,36 @@ body{
     border: none;
     border-radius: 10px;
     margin: 0% 1% 0% 1%;
-    background: rgba(31, 9, 95, 0.658) url(Icons/Icon_search.PNG) no-repeat center;
+    background-color: lightskyblue url(Icons/Icon_search.PNG) no-repeat center;
     background-size: 50%;
     width: 10%;
-    box-shadow: rgba(255,255,255,0.75) 0px 0px 0.5px 2px;
+    box-shadow: rgba(255, 255, 255, 0.75) 0px 0px 0.5px 2px;
 }
-
+.botao_voltar{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 10%;
+    height: 40px;
+    border: solid 1px blue;
+    border-radius: 10px;
+    color: blue;
+    background-color: white;
+    transition: background-color 0.5s ease, color 0.5s ease, transform 0.5s ease;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+.botao_voltar img{
+    width: 100%
+}
 .selectList{
     color: blue;
     transition: all 0.5s;
     border: none;
     border-radius: 5px;
     margin: 0% 1% 0% 1%;
-    background: rgb(231,223,255) url(Icons/Icon_filter2.PNG) no-repeat left;
+    background: rgb(255, 255, 255) url(Icons/Icon_filter2.PNG) no-repeat left;
     padding-left: 1.25%;
     background-size: 5%;
     width: 25%;
@@ -379,9 +398,9 @@ body{
 }
 
 .selectList:focus{
-    color: white;
+    color: rgb(0, 0, 0);
     border-radius: 0px;
-    background: rgba(31, 9, 95, 1) url(Icons/Icon_filter.png) no-repeat left;
+    background-color: lightskyblue url(Icons/Icon_filter.png) no-repeat left;
     background-size: 5%;
     box-shadow: rgba(255,255,255,0.75) 0px 0px 0.5px 2px;
 }
