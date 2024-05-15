@@ -46,8 +46,8 @@ body{
     flex-direction: column;
     /*background-color: rgb(47, 129, 253);
     padding: 3rem;*/
-}
 
+}
 .cabecalho{
     display: flex;
     justify-content: center;
@@ -114,6 +114,7 @@ h1{
 
 .input_box ::placeholder{
     color: rgb(61, 58, 58);
+    font-size: 20px;
 }
 
 .grupo_botao {
@@ -135,6 +136,7 @@ h1{
     background-color: white;
     transition: background-color 0.5s ease, color 0.5s ease, transform 0.5s ease;
     cursor: pointer;
+    font-size: 20px;
 }
 
 .botao:hover{
@@ -211,8 +213,7 @@ input::-webkit-inner-spin-button {
     flex-direction: column;
     margin-bottom: 1.1rem;
     width: 500px;
-    
-}
+    }
 
 .input_box2 input{
     margin: 0.2rem;
@@ -220,6 +221,7 @@ input::-webkit-inner-spin-button {
     border: none;
     border-radius: 10px;
     box-shadow: 1px 1px 6px #0000001c;
+    font-size: 20px;
     
 }
 
@@ -253,8 +255,9 @@ input::-webkit-inner-spin-button {
     background-color: white;
     transition: background-color 0.5s ease, color 0.5s ease, transform 0.5s ease;
     cursor: pointer;
-    font-size: 0.9rem;
-}
+    font-size: 20px;
+    font-weight: normal;
+}   
 
 .botao_voltar:hover{
     background-color: rgb(0, 68, 255);
@@ -299,4 +302,5 @@ input::-webkit-inner-spin-button {
         flex-wrap: nowrap;
 
     }
+    
 }
