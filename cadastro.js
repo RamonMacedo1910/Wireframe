@@ -14,13 +14,15 @@ function contar_caracteres(){
 
 }
 
+function mostrarSenha(){
+    var inputPass = document.getElementById('campo_senha2')
+    var btnShowPass = document.getElementById('btn-senha')
 
-
-
-const formulario = document.getElementById("form");
-const CodigoEtec = document.getElementById("campo_CodigoEtec");
-const email = document.getElementById("campo_email");
-const senha = document.getElementById("campo_senha");
-const senhaConfirmacao = document.getElementById("campo_senha2");
-
-
+    if(inputPass.type === 'password'){
+        inputPass.setAttribute('type', 'text')
+        btnShowPass.classList.replace('bi-eye-fill', 'bi-eye-slash-fill')
+    }else{
+        inputPass.setAttribute('type', 'password')
+        btnShowPass.classList.replace('bi-eye-slash-fill', 'bi-eye-fill')
+    }
+}
