@@ -95,6 +95,7 @@ h1{
     top: 50%;
     font-size: 25px;
     cursor: pointer;
+    color: blue;
 }
 
 .input_box input{
@@ -103,7 +104,8 @@ h1{
     border: none;
     border-radius: 10px;
     box-shadow: 1px 1px 6px #0000001c;
-    
+    font-size: 20px;
+    outline: none;
 }
 
 .input_box input:hover{
@@ -177,6 +179,7 @@ h1{
     font-weight: bolder;
     text-decoration: none;
     color: rgb(110, 255, 248);
+    
 }
 
 a{
@@ -236,6 +239,7 @@ input::-webkit-inner-spin-button {
     top: 50%;
     font-size: 25px;
     cursor: pointer;
+    color: blue;
 }
 
 .input_box2 input{
