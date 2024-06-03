@@ -2,19 +2,19 @@ var selectedFilter = "none"
 
 var fakeBDEntrance = [
     // Nome | RM | Entrada | Data
-    aluno1=["Yukio Utiyama Sato","14020","20:30","2024-04-01"],
-    aluno2=["Pedro Andreotti Sales","12045","07:50","2024-04-02"],
-    aluno3=["Ramon Mesquita","14053","12:30","2024-04-03"],
-    aluno4=["Arthur Kalinauskas","16032","21:00","2024-04-03"],
-    aluno5=["Roger da Silva","13551", "19:35", "2024-05-08"]
+    aluno1=["Yukio Utiyama Sato","14020","20:30","2024-04-01", "3I3"],
+    aluno2=["Pedro Andreotti Sales","12045","07:50","2024-04-02", "3I3"],
+    aluno3=["Ramon Mesquita","14053","12:30","2024-04-03", "3R3"],
+    aluno4=["Arthur Kalinauskas","16032","21:00","2024-04-03", "3I3"],
+    aluno5=["Roger da Silva","13551", "19:35", "2024-05-08", "3I3"]
 ];
 
 var fakeBDExit = [
     // Nome | RM | Saida | Data
-    aluno1=["Yukio Utiyama Sato","14020","22:30","2024-04-01"],
-    aluno2=["Pedro Andreotti Sales","12045","11:00","2024-04-02"],
-    aluno3=["Arthur Kalinauskas","16032","22:45","2024-04-03"],
-    aluno4=["Arthur Kalinauskas","16032","12:45","2024-04-04"],
+    aluno1=["Yukio Utiyama Sato","14020","22:30","2024-04-01", "3I3"],
+    aluno2=["Pedro Andreotti Sales","12045","11:00","2024-04-02", "3I3"],
+    aluno3=["Arthur Kalinauskas","16032","22:45","2024-04-03", "3I3"],
+    aluno4=["Arthur Kalinauskas","16032","12:45","2024-04-04", "3I3"],
 ];
 
 document.addEventListener("DOMContentLoaded",()=>{
@@ -45,6 +45,12 @@ var updtRegister = () => {
         exitNew.id = "exitGroup";
         document.getElementById("exit").appendChild(exitNew);
 
+        /*document.getElementById("foto").removeChild(document.getElementById("foto"));
+        var foto = document.createElement("div");
+        document.getElementById("Fotinha").appendChild(foto);*/
+
+        //NESSE ESPAÇO EU VOU TENTAR COLOCAR A FOTO(N TENHO A MENOR IDEIA DE COMO FAZ) = "SOS"
+    
     // Entrance
     for (let i = 0; i < fakeBDEntrance.length; i++) {
         if (fakeBDEntrance[i][3] == document.getElementById("dated").value){
@@ -71,6 +77,12 @@ var updtRegister = () => {
         rm_aluno.id = "rm_aluno";
         rm_aluno.textContent = "RM: "+fakeBDEntrance[i][1].toString();
 
+        var curso_aluno = document.createElement("div");
+        curso_aluno.classList.add("curso_aluno");
+        curso_aluno.id = "curso_aluno";
+        curso_aluno.textContent = "Curso: "+fakeBDEntrance[i][4].toString();
+
+
         var randomImg = document.createElement("div");
         randomImg.classList.add("randomImg");
 
@@ -78,6 +90,7 @@ var updtRegister = () => {
         centeredMaxwidth.appendChild(nm_aluno);
         centeredMaxwidth.appendChild(rm_aluno);
         innerFirstBox.appendChild(centeredMaxwidth);
+        innerFirstBox.appendChild(curso_aluno);
         innerFirstBox.appendChild(randomImg);
 
 
@@ -144,6 +157,11 @@ var updtRegister = () => {
         rm_aluno.id = "rm_aluno";
         rm_aluno.textContent = "RM: "+fakeBDExit[i][1].toString();
 
+        var curso_aluno = document.createElement("div");
+        curso_aluno.classList.add("curso_aluno");
+        curso_aluno.id = "curso_aluno";
+        curso_aluno.textContent = "Curso: "+fakeBDExit[i][4].toString()
+
         var randomImg = document.createElement("div");
         randomImg.classList.add("randomImg");
 
@@ -151,6 +169,7 @@ var updtRegister = () => {
         centeredMaxwidth.appendChild(nm_aluno);
         centeredMaxwidth.appendChild(rm_aluno);
         innerFirstBox.appendChild(centeredMaxwidth);
+        innerFirstBox.appendChild(curso_aluno);
         innerFirstBox.appendChild(randomImg);
 
 
