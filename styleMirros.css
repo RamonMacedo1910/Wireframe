@@ -83,18 +83,20 @@ body{
 
 .entrance{
     background-color: rgb(91, 187, 190);
-    border-radius: 8px;
-    box-shadow: rgb(91, 187, 190) 0px 0px 0px 15px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: rgb(0, 0, 0) 10px 10px 20px 2px;
     width: 20%;
     height: 100%;
     margin: 2% 2.5% 35% 2.5%;
     /*transition: background-color:all 0.5s ease, color 0.5s ease, transform:all 0.5s ease;
     */
-}
+    }
 
 .exit{
     background-color: rgb(245, 63, 0);
-    box-shadow: rgb(245, 63, 0) 0px 0px 0px 15px;
+    padding: 10px;
+    box-shadow: rgb(0, 0, 0) 10px 10px 20px 2px;
     border-radius: 10px;
     width: 20%;
     height: 100%;
@@ -276,7 +278,8 @@ body{
     background-color: rgba(231,223,255,1);
     box-shadow: rgba(0,0,0,0.25) 0px 5px 12.5px 0.25px;
     border-radius: 8px;
-    display: flex;
+    /*ANTES O DISPLAY ERA APENAS BOX, AGORA É FLEXBOX PARA QUE EXISTA ESPAÇO PARA A IMAGEM*/
+    display: flexbox;
     flex-direction: row;
     justify-content: center;
     align-items: center;
