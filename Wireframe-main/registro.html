@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styleMirros.css">
+    <script src="registro.js" type="text/Javascript"></script>
+    <title>Registro-StudentPass</title>
+    <style>
+        .searchIcon {
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+        }
+
+        .searchBox {
+            position: relative;
+        }
+
+        .searchInput {
+            padding-right: 40px;
+        }
+    </style>
+</head>
+<body class="backDesign2">
+   
+    <div class="fakeBody">
+        <img src="studantePass.png" alt="logo" id="logo" />
+        <a class="botao_voltar"  href="index.html">Sair</a>
+        <div class="centered teste">
+            <h1 class="centered">ETEC Adolpho Berezin</h1>
+            <div class="searchBox">
+                <input class="logInput searched searchInput" type="search" name="search" id="search" autocomplete="off">
+                <input class="SearchIcon" type="image" src="SearchIcon.png" width="40" height="40" id="IconeP">
+            </div>
+            <div class="col">
+            <div class="rowFlex">
+                <div class="entrance" id="entrance">
+                    <div class="centered titleLabel">Entrada</div>
+                    <div id="entranceGroup"></div>
+                </div> 
+
+                <div class="exit" id="exit">
+                    <div class="centered titleLabel">Saída</div>
+                    <div id="exitGroup"></div>
+                </div>
+            </div>
+        </div>
+            <div class="dataBox">
+                <div class="calendarImg"></div>
+                <input class="logInput dated" type="date" name="dated" id="dated" autocomplete="off">
+                <img src="Icon_calendar2.png" alt="calendario">
+            </div>
+            <div class="etecIcon"></div>
+        </div>
+    </div>
+</body>
+</html>
