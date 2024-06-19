@@ -2,9 +2,9 @@ var selectedFilter = "none"
 
 var fakeBDEntrance = [
     // Nome | RM | Entrada | Data
-    aluno1=["Yukio Utiyama Sato","14020","20:30","2024-04-01", "3I3"],
+    aluno1=["Yukio Sato","14020","20:30","2024-04-01", "3R3"],
     aluno2=["Pedro Andreotti Sales","12045","07:50","2024-04-02", "3I3"],
-    aluno3=["Ramon Mesquita","14053","12:30","2024-04-03", "3R3"],
+    aluno3=["Ramon Mesquita","14053","12:30","2024-04-03", "3I3"],
     aluno4=["Arthur Kalinauskas","16032","21:00","2024-04-03", "3I3"],
     aluno5=["Roger da Silva","13551", "19:35", "2024-05-08", "3I3"]
 ];
@@ -204,5 +204,22 @@ var updtRegister = () => {
         dived.appendChild(innerSecondBox);
         document.getElementById("exitGroup").appendChild(dived);
         }
+    }
+}
+
+// tentando criar uma barra de pesquisa
+function search(){
+    let input = document.getElementById(search).value
+    input = input.Tolowercase()
+    let x = document.getElementsByClassName(aluno1)
+
+    for(i = 0; i < x.length; i++){
+        if(!X[i].innerHTML.Tolowercase().includes(input))
+            x [i].style.display = "none"
+
+    }
+
+    else{
+        x[i].style.display = "list-item"
     }
 }
